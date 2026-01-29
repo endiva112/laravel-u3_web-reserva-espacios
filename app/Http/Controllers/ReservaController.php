@@ -32,13 +32,10 @@ class ReservaController extends Controller
                 ->get();
         }
 
-        return view('reservas.index', compact(
-            'aulas',
-            'franjas',
-            'reservas',
-            'fechaInicio',
-            'fechaFin'
-        ));
+        return view('reservas.index', [
+        'aulas' => Aula::all(),
+        'franjas' => FranjaHoraria::orderBy('orden')->get(),
+    ]);
     }
 
     /**
