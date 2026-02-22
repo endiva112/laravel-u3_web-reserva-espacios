@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory; // ← AÑADIR ESTO
 
 class Reserva extends Model
 {
+    use HasFactory; // ← AÑADIR ESTO
+
     protected $fillable = [
         'user_id',
         'aula_id',
