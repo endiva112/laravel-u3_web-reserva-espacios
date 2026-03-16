@@ -9,6 +9,27 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- DNI -->
+        <div class="mt-4">
+            <x-input-label for="dni" :value="__('DNI')" />
+            <x-text-input id="dni" class="block mt-1 w-full"
+                type="text"
+                name="dni"
+                :value="old('dni')"
+                required />
+            <x-input-error :messages="$errors->get('dni')" class="mt-2" />
+        </div>
+
+        <!-- Departamento -->
+        <div class="mt-4">
+            <x-input-label for="departamento" :value="__('Departamento')" />
+            <x-text-input id="departamento" class="block mt-1 w-full"
+                type="text"
+                name="departamento"
+                required />
+            <x-input-error :messages="$errors->get('departamento')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
